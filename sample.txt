@@ -1,0 +1,90 @@
+# How to create a Country List API using Django REST Framework
+
+Step 1: Create the Country Model
+Open `apps/common/models.py` and add your model:
+
+```python
+class Country(BaseModel):
+    name = models.CharField(verbose_name="name", max_length=100)
+    code = models.CharField(verbose_name="code", max_length=5)
+
+    def __str__(self):
+        return self.name
+```
+
+Step 2: Create a Serializer
+Create a file named `serializers.py` in `apps/common/` and add the translation layer:
+
+```python
+from rest_framework import serializers
+from .models import Country
+
+class CountrySerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Country
+        fields = ['id', 'name', 'code', 'created_at']
+```
+
+Step 3: Create the View (API Endpoint)
+Open `apps/common/views.py` and write your endpoint logic using generic views or ViewSets. Using a `ListAPIView` is easiest for read-only lists!
+
+```python
+from rest_framework.generics import ListAPIView
+from .models import Country
+from .serializers import CountrySerializer
+
+class CountryListAPIView(ListAPIView):
+    queryset = Country.objects.all()
+    serializer_class = CountrySerializer
+```
+
+Step 4: Wire up the URLs
+Create `apps/common/urls.py` to route traffic to your view.
+
+```python
+from django.urls import path
+from .views import CountryListAPIView
+
+urlpatterns = [
+    path('countries/', CountryListAPIView.as_view(), name='country-list'),
+]
+```
+
+Finally, don't forget to include these app URLs in your main `config/urls.py`:
+
+```python
+from django.urls import path, include
+
+urlpatterns = [
+    # ... other paths like admin/
+    path('api/common/', include('apps.common.urls')), 
+]
+```
+
+That's it! Now when you request `GET /api/common/countries/`, Django REST Framework will automatically return a JSON list of all the Country entries in your database!
+
+
+
+
+
+
+
+
+
+
+###
+
+class Profile(BaseModel):
+    user = models.OneToOneField(settings.AUTH_USER_MODEL, verbose_name="user", on_delete=models.RESTRICT, related_name='profile')
+    bio = models.TextField(verbose_name="bio", blank=True)
+    avatar = models.ForeignKey('common.Media', verbose_name="avatar", on_delete=models.SET_NULL, null=True, blank=True, related_name='user_avatars')
+    phone = models.CharField(verbose_name="phone", max_length=255, blank=True)
+    
+    def __str__(self):
+        return f"{self.user}'s profile"
+
+    class Meta:
+        verbose_name = "Profile"
+        verbose_name_plural = "Profiles"
+
+####

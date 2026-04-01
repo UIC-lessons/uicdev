@@ -1,0 +1,165 @@
+Table: User
+  - id PK
+  - phone 
+  - password 
+  - first_name 
+  - last_name 
+  - avatar_id FK
+  - bio 
+  - age 
+  - gender 
+  - country_id FK
+  - region_id FK
+  - is_active 
+  - is_deleted 
+  - is_staff 
+  - is_superuser 
+  - last_login 
+  - created_at 
+  - updated_at 
+
+Table: UserEducation
+  - id PK
+  - user_id FK
+  - education_id FK
+  - field 
+  - start_date 
+  - end_date 
+
+Table: Education
+  - id PK
+  - name 
+  - type 
+  - website_url 
+  - is_active 
+
+Table: UserExperience
+  - id PK
+  - user_id FK
+  - name 
+  - position 
+  - website_url 
+  - skills 
+  - start_date 
+  - end_date 
+
+Table: UserCertificate
+  - id PK
+  - user_id FK
+  - course_id FK
+  - name 
+  - attachment_id FK
+
+Table: Course
+  - id PK
+  - author_id FK
+  - banner_id FK
+  - name 
+  - description 
+  - category_id FK
+  - reward_stars 
+  - is_active 
+  - is_published 
+
+Table: Author
+  - id PK
+  - first_name 
+  - last_name 
+  - description 
+  - avatar_id FK
+  - experience_years 
+
+Table: Module
+  - id PK
+  - course_id FK
+  - name 
+  - course_order 
+
+Table: Enrollment
+  - id PK
+  - user_id FK
+  - course_id FK
+  - started_at 
+  - finished_at 
+
+Table: LessonQuestion
+  - id PK
+  - lesson_id FK
+  - user_id FK
+  - text 
+  - created_at 
+
+Table: LessonAnswer
+  - id PK
+  - lesson_id FK
+  - user_id FK
+  - question_id FK
+  - text 
+  - is_deleted 
+
+Table: LessonResource
+  - id PK
+  - lesson_id FK
+  - media_id FK
+  - caption 
+  - created_at 
+
+Table: LessonRate
+  - id PK
+  - lesson_id FK
+  - user_id FK
+  - star_count 
+  - comment 
+  - created_at 
+
+Table: UserHomeworkAttempt
+  - id PK
+  - lesson_id FK
+  - user_id FK
+  - work_file_id FK
+  - title 
+  - description 
+  - created_at 
+
+Table: Category
+  - id PK
+  - name 
+
+Table: Tag
+  - id PK
+  - name 
+
+Table: CourseTag
+  - id PK
+  - course_id FK
+  - tag_id FK
+
+Table: Notification
+  - id PK
+  - user_id (NULL=True) FK
+  - course_id (NULL=True) FK
+  - module_id (NULL=True) FK
+  - category_id (NULL=True) FK
+  - title 
+  - message 
+  - is_send_to_all 
+  - image_id FK
+  - created_at 
+
+Table: Lesson
+  - id PK
+  - module_id FK
+  - video_id FK
+  - name 
+  - description 
+  - current_rating 
+  - type 
+  - max_attempts_count 
+  - attempt_interval 
+  - lesson_order 
+  - is_active 
+
+Table: Media
+  - id PK
+  - file_url 
+
