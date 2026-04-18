@@ -12,7 +12,7 @@ from .user_experience import (
     UserExperienceListCreateAPIView,
     UserExperienceRetrieveUpdateDestroyAPIView,
 )
-
+from .sms_send import SendSmsAPIView
 __all__ = [
     "UserListCreateAPIView",
     "UserRetrieveUpdateDestroyAPIView",
@@ -24,4 +24,5 @@ __all__ = [
     "UserEducationRetrieveUpdateDestroyAPIView",
     "UserExperienceListCreateAPIView",
     "UserExperienceRetrieveUpdateDestroyAPIView",
+    "SendSmsAPIView",
 ]

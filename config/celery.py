@@ -1,7 +1,10 @@
+import os
+
 from celery import Celery
 
-app = Celery("celery", broker = "redis://localhost")
+os.environ.setdefault("DJANGO_SETTINGS_MODULE", "config.settings")
 
-@app.task
-def add(x, y):
-    return x + y
+app = Celery(__name__)
+
+app.config_from_object("django.conf:settings", namespace="CELERY")
+app.autodiscover_tasks()

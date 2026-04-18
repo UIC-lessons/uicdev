@@ -11,6 +11,7 @@ from .views import (
     UserEducationRetrieveUpdateDestroyAPIView,
     UserExperienceListCreateAPIView,
     UserExperienceRetrieveUpdateDestroyAPIView,
+    SendSmsAPIView,
 )
 
 urlpatterns = [
@@ -24,4 +25,5 @@ urlpatterns = [
     path("user-educations/<int:pk>/", UserEducationRetrieveUpdateDestroyAPIView.as_view()),
     path("user-experiences/", UserExperienceListCreateAPIView.as_view()),
     path("user-experiences/<int:pk>/", UserExperienceRetrieveUpdateDestroyAPIView.as_view()),
+    path("send-sms/", SendSmsAPIView.as_view()),
 ]

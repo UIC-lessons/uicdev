@@ -300,3 +300,11 @@ SPECTACULAR_SETTINGS = {
     "VERSION": "1.0.0",
     "SERVE_INCLUDE_SCHEMA": False,  # hides the raw schema endpoint from the UI
 }
+
+#Celery settings
+CELERY_TIMEZONE = TIME_ZONE
+CELERY_TASK_TRACK_STARTED = True
+CELERY_TASK_TIME_LIMIT = 30 * 60
+
+CELERY_BROKER_URL = "redis://localhost:6380/10"
+CELERY_RESULT_BACKEND = "redis://localhost:6380/9"

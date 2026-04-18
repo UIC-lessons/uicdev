@@ -3,6 +3,7 @@ from .education import EducationSerializer
 from .user_certificate import UserCertificateSerializer
 from .user_education import UserEducationSerializer
 from .user_experience import UserExperienceSerializer
+from .register import RegisterSerializer
 
 __all__ = [
     "UserSerializer",
@@ -10,4 +11,5 @@ __all__ = [
     "UserCertificateSerializer",
     "UserEducationSerializer",
     "UserExperienceSerializer",
+    "RegisterSerializer",
 ]
