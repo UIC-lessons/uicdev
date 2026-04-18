@@ -1,12 +1,13 @@
 from .country import CountryAPIView
-from .city import CityAPIView
+from .city import CityListCreateAPIView, CityDetailAPIView
 from .category import CategoryListCreateAPIView, CategoryRetriveUpdateDestroyAPIView
 from .tag import TagListCreateAPIView, TagRetriveUpdateDetstroyAPIView
 from .media import MediaListCreateAPIView, MediaDestroyAPIView
 
 __all__ = [
     "CountryAPIView",
-    "CityAPIView",
+    "CityListCreateAPIView",
+    "CityDetailAPIView",
     "CategoryListCreateAPIView",
     "CategoryRetriveUpdateDestroyAPIView",
     "TagListCreateAPIView",

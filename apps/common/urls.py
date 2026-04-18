@@ -1,7 +1,8 @@
 from django.urls import path
 from apps.common.views import (
     CountryAPIView,
-    CityAPIView,
+    CityListCreateAPIView,
+    CityDetailAPIView,
     TagListCreateAPIView,
     TagRetriveUpdateDetstroyAPIView,
     CategoryListCreateAPIView,
@@ -13,8 +14,8 @@ from apps.common.views import (
 urlpatterns = [
     path("country/", CountryAPIView.as_view(), name="countries"),
     path("country/<int:pk>/", CountryAPIView.as_view(), name="country"),
-    path("city/", CityAPIView.as_view(), name="cities"),
-    path("city/<int:pk>/", CityAPIView.as_view(), name="city"),
+    path("city/", CityListCreateAPIView.as_view(), name="cities"),
+    path("city/<int:pk>/", CityDetailAPIView.as_view(), name="city"),
     path("category/", CategoryListCreateAPIView.as_view(), name="categories"),
     path(
         "category/<int:pk>/",

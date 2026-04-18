@@ -11,4 +11,4 @@ class MediaListCreateAPIView(ListCreateAPIView):
 class MediaDestroyAPIView(DestroyAPIView):
     queryset = Media.objects.all()
     serializer_class = MediaSerializer
-    lookup_field = "id"
+

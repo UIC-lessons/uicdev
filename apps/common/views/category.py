@@ -11,4 +11,3 @@ class CategoryListCreateAPIView(ListCreateAPIView):
 class CategoryRetriveUpdateDestroyAPIView(RetrieveUpdateDestroyAPIView):
     queryset = Category.objects.all()
     serializer_class = CategorySerializer
-    lookup_field = "id"

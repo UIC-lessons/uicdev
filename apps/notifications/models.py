@@ -1,12 +1,13 @@
 from django.db import models
 from django.conf import settings
 from apps.common.models import BaseModel
+from django.utils.translation import gettext_lazy as _
 
 
 class Notification(BaseModel):
     user = models.ForeignKey(
         settings.AUTH_USER_MODEL,
-        verbose_name="user",
+        verbose_name=_("user"),
         on_delete=models.CASCADE,
         null=True,
         blank=True,
@@ -14,39 +15,39 @@ class Notification(BaseModel):
     )
     course = models.ForeignKey(
         "courses.Course",
-        verbose_name="course",
+        verbose_name=_("course"),
         on_delete=models.CASCADE,
         null=True,
         blank=True,
     )
     module = models.ForeignKey(
         "courses.Module",
-        verbose_name="module",
+        verbose_name=_("module"),
         on_delete=models.CASCADE,
         null=True,
         blank=True,
     )
     category = models.ForeignKey(
         "common.Category",
-        verbose_name="category",
+        verbose_name=_("category"),
         on_delete=models.CASCADE,
         null=True,
         blank=True,
     )
-    title = models.CharField(verbose_name="title", max_length=255)
-    message = models.TextField(verbose_name="message")
-    is_send_to_all = models.BooleanField(verbose_name="is send to all", default=False)
+    title = models.CharField(verbose_name=_("title"), max_length=255)
+    message = models.TextField(verbose_name=_("message"))
+    is_send_to_all = models.BooleanField(verbose_name=_("is send to all"), default=False)
     image = models.ForeignKey(
         "common.Media",
-        verbose_name="image",
+        verbose_name=_("image"),
         on_delete=models.SET_NULL,
         null=True,
         blank=True,
     )
 
     class Meta:
-        verbose_name = "Notification"
-        verbose_name_plural = "Notifications"
+        verbose_name = _("Notification")
+        verbose_name_plural = _("Notifications")
 
     def __str__(self):
         return self.title

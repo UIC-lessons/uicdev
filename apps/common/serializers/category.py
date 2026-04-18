@@ -7,4 +7,3 @@ class CategorySerializer(ModelSerializer):
         model = Category
         fields = "__all__"
         read_only_fields = ["id", "created_at", "updated_at"]
-        lookup_field = "id"

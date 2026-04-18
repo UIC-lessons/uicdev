@@ -1,11 +1,10 @@
-from rest_framework.generics import GenericAPIView
+from rest_framework.generics import ListCreateAPIView, RetrieveUpdateDestroyAPIView
 from rest_framework.response import Response
 from rest_framework import status
 from apps.common.models import City
 from apps.common.serializers.city import CitySerializer
 
-
-class CityAPIView(GenericAPIView):
+class CityListCreateAPIView(ListCreateAPIView):
     queryset = City.objects.all()
     serializer_class = CitySerializer
 
@@ -15,13 +14,15 @@ class CityAPIView(GenericAPIView):
         return Response(serializer.data)
 
     def post(self, request, *args, **kwargs):
-        # queryset = self.get_queryset()                               mine
-        # serializer = self.get_serializer(queryset, many=True)
-
         serializer = self.get_serializer(data=request.data)
         serializer.is_valid(raise_exception=True)
         serializer.save()
         return Response(serializer.data, status=201)
+
+
+class CityDetailAPIView(RetrieveUpdateDestroyAPIView):
+    queryset = City.objects.all()
+    serializer_class = CitySerializer
 
     def put(self, request, *args, **kwargs):
         instance = self.get_object()

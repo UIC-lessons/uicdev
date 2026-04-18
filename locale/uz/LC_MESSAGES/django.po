@@ -1,0 +1,401 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-04-04 11:16+0500\n"
+"PO-Revision-Date: 2026-04-17 14:52+0500\n"
+"Last-Translator:   <>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Translated-Using: django-rosetta 0.10.3\n"
+
+#: .\apps\accounts\models.py:9
+msgid "bio"
+msgstr "tavsif"
+
+#: .\apps\accounts\models.py:12 .\apps\courses\models.py:12
+msgid "avatar"
+msgstr "profil rasmi"
+
+#: .\apps\accounts\models.py:18
+msgid "phone"
+msgstr "telefon raqam"
+
+#: .\apps\accounts\models.py:24
+msgid "User"
+msgstr "foydalanuvchi"
+
+#: .\apps\accounts\models.py:25
+msgid "Users"
+msgstr "foydalanuvchilar"
+
+#: .\apps\accounts\models.py:29 .\apps\accounts\models.py:68
+#: .\apps\accounts\models.py:90 .\apps\common\models.py:25
+#: .\apps\common\models.py:36 .\apps\common\models.py:47
+#: .\apps\common\models.py:58 .\apps\courses\models.py:40
+#: .\apps\courses\models.py:66 .\apps\courses\models.py:89
+msgid "name"
+msgstr "ism"
+
+#: .\apps\accounts\models.py:30 .\apps\courses\models.py:92
+msgid "type"
+msgstr "turi"
+
+#: .\apps\accounts\models.py:31 .\apps\accounts\models.py:70
+msgid "website url"
+msgstr "vebsayt manzili"
+
+#: .\apps\accounts\models.py:32 .\apps\courses\models.py:51
+#: .\apps\courses\models.py:100
+msgid "is active"
+msgstr "faollik"
+
+#: .\apps\accounts\models.py:35
+msgid "Education"
+msgstr "Ta`lim"
+
+#: .\apps\accounts\models.py:36
+msgid "Educations"
+msgstr "Ta'lim"
+
+#: .\apps\accounts\models.py:45 .\apps\accounts\models.py:64
+#: .\apps\accounts\models.py:83 .\apps\courses\models.py:131
+#: .\apps\interactions\models.py:15 .\apps\interactions\models.py:32
+#: .\apps\interactions\models.py:56 .\apps\interactions\models.py:74
+#: .\apps\notifications\models.py:10
+msgid "user"
+msgstr "foydalanuvchi"
+
+#: .\apps\accounts\models.py:50
+msgid "education"
+msgstr "ta'lim"
+
+#: .\apps\accounts\models.py:52
+msgid "field"
+msgstr "soha"
+
+#: .\apps\accounts\models.py:53 .\apps\accounts\models.py:72
+msgid "start date"
+msgstr "boshlanish vaqti"
+
+#: .\apps\accounts\models.py:54 .\apps\accounts\models.py:73
+msgid "end date"
+msgstr "tugash vaqti"
+
+#: .\apps\accounts\models.py:57
+msgid "User Education"
+msgstr "Foydalanuvchi ta'limi"
+
+#: .\apps\accounts\models.py:58
+msgid "User Educations"
+msgstr "Foydalanuvchi ta'limi"
+
+#: .\apps\accounts\models.py:69
+msgid "position"
+msgstr "lavozim"
+
+#: .\apps\accounts\models.py:71
+msgid "skills"
+msgstr "ko'nikmalar"
+
+#: .\apps\accounts\models.py:76
+msgid "User Experience"
+msgstr "Foydalanuvchi tajribasi"
+
+#: .\apps\accounts\models.py:77
+msgid "User Experiences"
+msgstr "Foydalanuvchi tajribasi"
+
+#: .\apps\accounts\models.py:88 .\apps\courses\models.py:64
+#: .\apps\courses\models.py:137 .\apps\notifications\models.py:18
+msgid "course"
+msgstr "kurs"
+
+#: .\apps\accounts\models.py:93
+msgid "attachment"
+msgstr "qo'shimcha"
+
+#: .\apps\accounts\models.py:100
+msgid "User Certificate"
+msgstr "Foydalanuvchi sertifikati "
+
+#: .\apps\accounts\models.py:101
+msgid "User Certificates"
+msgstr "Foydalanuvchi sertifikati "
+
+#: .\apps\common\models.py:6
+msgid "created at"
+msgstr "qo'shilgan vaqt"
+
+#: .\apps\common\models.py:7
+msgid "updated at"
+msgstr "oxirgi yangilangan vaqt"
+
+#: .\apps\common\models.py:14
+msgid "file url"
+msgstr "fayl manzili"
+
+#: .\apps\common\models.py:17 .\apps\common\models.py:18
+msgid "Media"
+msgstr "Rasmlar"
+
+#: .\apps\common\models.py:28
+msgid "Category"
+msgstr "Kategoriya"
+
+#: .\apps\common\models.py:29
+msgid "Categories"
+msgstr "Kategoriyalar"
+
+#: .\apps\common\models.py:39
+msgid "Tag"
+msgstr "Tag"
+
+#: .\apps\common\models.py:40
+msgid "Tags"
+msgstr "Taglar"
+
+#: .\apps\common\models.py:50
+msgid "Country"
+msgstr "Davlat"
+
+#: .\apps\common\models.py:51
+msgid "Countries"
+msgstr "Davlatlar"
+
+#: .\apps\common\models.py:60
+msgid "country"
+msgstr "davlat"
+
+#: .\apps\common\models.py:64
+msgid "City"
+msgstr "shahar"
+
+#: .\apps\common\models.py:65
+msgid "Cities"
+msgstr "shaharlar"
+
+#: .\apps\courses\models.py:7
+msgid "first name"
+msgstr "ism"
+
+#: .\apps\courses\models.py:8
+msgid "last name"
+msgstr "Familya"
+
+#: .\apps\courses\models.py:9 .\apps\courses\models.py:41
+#: .\apps\courses\models.py:90 .\apps\interactions\models.py:84
+msgid "description"
+msgstr "kurs tavsif"
+
+#: .\apps\courses\models.py:18
+msgid "experience years"
+msgstr "tajriba"
+
+#: .\apps\courses\models.py:22
+msgid "Author"
+msgstr "Muallif"
+
+#: .\apps\courses\models.py:23
+msgid "Authors"
+msgstr "Mualliflar"
+
+#: .\apps\courses\models.py:31
+msgid "author"
+msgstr "muallif"
+
+#: .\apps\courses\models.py:35
+msgid "banner"
+msgstr "kurs rasmi"
+
+#: .\apps\courses\models.py:44 .\apps\notifications\models.py:32
+msgid "category"
+msgstr "kategoriya"
+
+#: .\apps\courses\models.py:49
+msgid "tags"
+msgstr "teglar"
+
+#: .\apps\courses\models.py:50
+msgid "reward stars"
+msgstr "baholar"
+
+#: .\apps\courses\models.py:52
+msgid "is published"
+msgstr "chop etilgan"
+
+#: .\apps\courses\models.py:55
+msgid "Course"
+msgstr "Kurs"
+
+#: .\apps\courses\models.py:56
+msgid "Courses"
+msgstr "Kurslar"
+
+#: .\apps\courses\models.py:67
+msgid "course order"
+msgstr "kurs navbati"
+
+#: .\apps\courses\models.py:71
+msgid "Module"
+msgstr "Modul"
+
+#: .\apps\courses\models.py:72
+msgid "Modules"
+msgstr "Modullar"
+
+#: .\apps\courses\models.py:80 .\apps\notifications\models.py:25
+msgid "module"
+msgstr "modul"
+
+#: .\apps\courses\models.py:84
+msgid "video"
+msgstr "video"
+
+#: .\apps\courses\models.py:91
+msgid "current rating"
+msgstr "xozirgi baho"
+
+#: .\apps\courses\models.py:94
+msgid "max attempts count"
+msgstr "urinishlar soni"
+
+#: .\apps\courses\models.py:97
+msgid "attempt interval"
+msgstr "urinish vaqt oralig'i"
+
+#: .\apps\courses\models.py:99
+msgid "lesson order"
+msgstr "dars ro'yxati"
+
+#: .\apps\courses\models.py:104
+msgid "Lesson"
+msgstr "Dars"
+
+#: .\apps\courses\models.py:105
+msgid "Lessons"
+msgstr "Darslar"
+
+#: .\apps\courses\models.py:114 .\apps\interactions\models.py:10
+#: .\apps\interactions\models.py:29 .\apps\interactions\models.py:51
+#: .\apps\interactions\models.py:69
+msgid "lesson"
+msgstr "dars"
+
+#: .\apps\courses\models.py:119
+msgid "media"
+msgstr "rasm"
+
+#: .\apps\courses\models.py:121
+msgid "caption"
+msgstr "--"
+
+#: .\apps\courses\models.py:124
+msgid "Lesson Resource"
+msgstr "Dars materiali"
+
+#: .\apps\courses\models.py:125
+msgid "Lesson Resources"
+msgstr "Dars materiallari"
+
+#: .\apps\courses\models.py:142
+msgid "finished at"
+msgstr "tugagan vaqti"
+
+#: .\apps\courses\models.py:146
+msgid "Enrollment"
+msgstr "Kursga qatnashish"
+
+#: .\apps\courses\models.py:147
+msgid "Enrollments"
+msgstr "Kursga qatnashish"
+
+#: .\apps\interactions\models.py:17 .\apps\interactions\models.py:40
+msgid "text"
+msgstr "matn"
+
+#: .\apps\interactions\models.py:20
+msgid "Lesson Question"
+msgstr "Dars savoli"
+
+#: .\apps\interactions\models.py:21
+msgid "Lesson Questions"
+msgstr "Dars savollari"
+
+#: .\apps\interactions\models.py:36
+msgid "question"
+msgstr "savol"
+
+#: .\apps\interactions\models.py:41
+msgid "is deleted"
+msgstr "o'chirilganmi"
+
+#: .\apps\interactions\models.py:44
+msgid "Lesson Answer"
+msgstr "Dars javobi"
+
+#: .\apps\interactions\models.py:45
+msgid "Lesson Answers"
+msgstr "Dars javoblari"
+
+#: .\apps\interactions\models.py:58
+msgid "star count"
+msgstr "baho soni"
+
+#: .\apps\interactions\models.py:59
+msgid "comment"
+msgstr "izoh"
+
+#: .\apps\interactions\models.py:62
+msgid "Lesson Rate"
+msgstr "Dars bahosi"
+
+#: .\apps\interactions\models.py:63
+msgid "Lesson Rates"
+msgstr "Dars baholari"
+
+#: .\apps\interactions\models.py:78
+msgid "work file"
+msgstr "ish hujjatlari"
+
+#: .\apps\interactions\models.py:83 .\apps\notifications\models.py:37
+msgid "title"
+msgstr "Unvon"
+
+#: .\apps\interactions\models.py:87
+msgid "User Homework Attempt"
+msgstr "Foydalanuvchi topshiriq imkoniyati"
+
+#: .\apps\interactions\models.py:88
+msgid "User Homework Attempts"
+msgstr "Foydalanuvchi topshiriq imkoniyatlari"
+
+#: .\apps\notifications\models.py:38
+msgid "message"
+msgstr "xabar"
+
+#: .\apps\notifications\models.py:39
+msgid "is send to all"
+msgstr "hammagami"
+
+#: .\apps\notifications\models.py:42
+msgid "image"
+msgstr "rasm"
+
+#: .\apps\notifications\models.py:49
+msgid "Notification"
+msgstr "Xabarnoma"
+
+#: .\apps\notifications\models.py:50
+msgid "Notifications"
+msgstr "Xabarnomalar"

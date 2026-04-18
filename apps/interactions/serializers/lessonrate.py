@@ -1,8 +1,12 @@
 from rest_framework.serializers import ModelSerializer
 from apps.interactions.models import LessonRate
+from apps.courses.serializers import LessonSerializer
+from apps.accounts.serializers import UserSerializer
 
 
 class LessonRateSerializer(ModelSerializer):
+    lesson = LessonSerializer(read_only=True)
+    user = UserSerializer(read_only=True)
     class Meta:
         model = LessonRate
         fields = "__all__"

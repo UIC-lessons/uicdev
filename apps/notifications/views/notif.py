@@ -22,16 +22,14 @@ class NotificationCreateAPIView(CreateAPIView):
 class NotificationUpdateAPIView(UpdateAPIView):
     queryset = Notification.objects.all()
     serializer_class = NotificationSerializer
-    lookup_field = "id"
 
 
 class NotificationDeleteAPIView(DestroyAPIView):
     queryset = Notification.objects.all()
     serializer_class = NotificationSerializer
-    lookup_field = "id"
 
 
 class NotificationRetrieveAPIView(RetrieveAPIView):
     queryset = Notification.objects.all()
     serializer_class = NotificationSerializer
-    lookup_field = "id"
+    
