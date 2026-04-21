@@ -32,7 +32,7 @@ LOCAL_APPS = [
     "apps.accounts",
     "apps.courses",
     "apps.interactions",
-    "apps.notifications",
+    "apps.notifications.apps.NotificationsConfig",
 ]
 
 INSTALLED_APPS = EXTERNAL_APPS + DJANGO_APPS + LOCAL_APPS 

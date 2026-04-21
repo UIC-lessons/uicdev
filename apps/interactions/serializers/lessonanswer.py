@@ -9,5 +9,5 @@ class LessonAnswerSerializer(ModelSerializer):
     class Meta:
         model = LessonAnswer
         fields = "__all__"
-        read_only_fields = ["id", "lesson", "is_deleted", "created_at", "updated_at"]
+        read_only_fields = ["id", "is_deleted", "created_at", "updated_at"]
         lookup_field = "id"

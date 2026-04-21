@@ -138,6 +138,9 @@ class Enrollment(BaseModel):
         on_delete=models.CASCADE,
         related_name="enrollments",
     )
+    started_at = models.DateTimeField(
+        verbose_name=_("started at"), null=True, blank=True
+    )
     finished_at = models.DateTimeField(
         verbose_name=_("finished at"), null=True, blank=True
     )
@@ -145,3 +148,4 @@ class Enrollment(BaseModel):
     class Meta:
         verbose_name = _("Enrollment")
         verbose_name_plural = _("Enrollments")
+        unique_together = ("user", "course")

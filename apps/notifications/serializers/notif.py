@@ -6,9 +6,9 @@ from apps.common.serializers import CategorySerializer, MediaSerializer
 
 class NotificationSerializer(ModelSerializer):
     user = UserSerializer(read_only=True)
-    course = CourseSerializer(read_only=True)
-    module = ModuleSerializer(read_only=True)
-    category = CategorySerializer(read_only=True)
+    # course = CourseSerializer(read_only=True)
+    # module = ModuleSerializer(read_only=True)
+    # category = CategorySerializer(read_only=True)
     image = MediaSerializer(read_only=True)
     class Meta:
         model = Notification
@@ -26,10 +26,6 @@ class NotificationSerializer(ModelSerializer):
             "updated_at",
         ]
         read_only_fields = [
-            "user",
-            "course",
-            "module",
-            "category",
             "id",
             "image",
             "created_at",
