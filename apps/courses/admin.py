@@ -57,6 +57,6 @@ class LessonResourceAdmin(admin.ModelAdmin):
 @admin.register(Enrollment)
 class EnrollmentAdmin(admin.ModelAdmin):
     list_display = ("id", "user", "course", "created_at", "finished_at", "updated_at")
-    search_fields = ("user__username", "course__name", "user__first_name", "user__last_name", "course__name")
+    search_fields = ("user", "course__name", "user__first_name", "user__last_name", "course__name")
     list_filter = ("created_at", "finished_at")
-    readonly_fields = ("id", "created_at", "updated_at")
+    readonly_fields = ("created_at", "updated_at")

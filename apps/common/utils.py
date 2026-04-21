@@ -14,13 +14,14 @@ headers = {
 }
 
 # SMS Yuborish
-def send_sms(phone: str, message: str) -> dict:
+def send_sms(phone: str, message: str, from_name: str = "UICdev") -> dict:
     response = requests.post(
         f"{BASE_URL}/send_sms.php",
         headers=headers,
         json={
             "phone": phone,
-            "message": message
+            "message": message,
+            "from": from_name
         }
     )
     return response.json()

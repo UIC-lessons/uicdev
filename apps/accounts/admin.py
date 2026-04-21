@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import Education, UserEducation, UserExperience, UserCertificate
+from .models import User, Education, UserEducation, UserExperience, UserCertificate
 
 
 @admin.register(Education)
@@ -31,4 +31,12 @@ class UserCertificateAdmin(admin.ModelAdmin):
     list_display = ("id", "user", "course", "name", "created_at", "updated_at")
     search_fields = ("user__username", "name", "course__name")
     list_filter = ("created_at", "name", "course")
+    readonly_fields = ("id", "created_at", "updated_at")
+
+
+@admin.register(User)
+class UserAdmin(admin.ModelAdmin):
+    list_display = ("id", "username", "email", "first_name", "last_name", "is_staff", "is_active", "created_at", "updated_at")
+    search_fields = ("username", "email", "first_name", "last_name")
+    list_filter = ("is_staff", "is_active", "created_at")
     readonly_fields = ("id", "created_at", "updated_at")

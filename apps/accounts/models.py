@@ -16,6 +16,8 @@ class User(AbstractUser):
         related_name="user_avatars",
     )
     phone = models.CharField(verbose_name=_("phone"), max_length=255, blank=True)
+    created_at = models.DateTimeField(auto_now_add=True)
+    updated_at = models.DateTimeField(auto_now=True)
 
     def __str__(self):
         return f"{self.username}'s profile"

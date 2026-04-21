@@ -4,7 +4,7 @@ from apps.common.serializers import MediaSerializer
 
 
 class UserSerializer(ModelSerializer):
-    profile_picture = MediaSerializer(read_only=True)
+    avatar = MediaSerializer(read_only=True)
 
     class Meta:
         model = User
@@ -17,15 +17,18 @@ class UserSerializer(ModelSerializer):
             "last_name",
             "phone",
             "bio",
-            "profile_picture",
             "is_active",
             "is_staff",
             "is_superuser",
             "date_joined",
+            "avatar"
         ]
         read_only_fields = (
             "id",
-            "date_joined"
+            "date_joined",
+            "is_active",
+            "is_staff",
+            "is_superuser"
         )
         extra_kwargs = {
             "password": {"write_only": True}
